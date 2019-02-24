@@ -7,3 +7,7 @@ Dans le cadre de nos études, nous serons amenés à présenter notre travail à
 ## Schéma Merise :
 
 ![merise](/img/MONT_VALENTIN_mcdcv.PNG)
+
+## Javascript
+
+Après avoir établie l’HTML et le CSS, j’ai inséré du Javascript sur mon site. J’ai trouvé après mure réflexion qu’un carrousel pourrai être un bonne idée. Je n’ai pas encore décidé quelles images contiendra mon carrousel mais j’ai des idées en tête par exemple : Il pourrait contenir tous mes diplômes qu’on pourra consulter en faisant défilé le slider ou il pourra aussi être utiliser afin de mettre en avant toutes les entreprises ou j’ai travaillé… Ce qui est sûr c’est qu’il permettra de consulter des informations à mon sujet de manière simple et efficace.
