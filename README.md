@@ -6,7 +6,7 @@ Dans le cadre de nos études, nous serons amenés à présenter notre travail à
 
 ## Schéma Merise :
 
-![merise](/img/MONT_VALENTIN_mcdcv.PNG)
+![merise](/img/MONT_VALENTIN_MERISE.PNG)
 
 ## Javascript
 
