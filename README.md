@@ -16,3 +16,6 @@ Après avoir établie l’HTML et le CSS, j’ai inséré du Javascript sur mon 
 
 J’ai créé une base de données sous oracle avec le logiciel oracle sql developer. Je n’ai pas repris exactement mon schéma merise pour réaliser ma base de données. En pratique, le schéma n’était pas simple à réaliser et donc j’ai revue la conception théorique de la bdd. Dans la base de données, j’ai créé 9 tables : compétence, infoperso, contact, passions, formation, expérience, structures et dont 2 tables intermédiaires qui sont competence_formation et competence_experience qui font le lien entre les tables compétence, expérience et formation.Et ensuite j’ai inséré les information à on sujet dans les tables adéquats. Enfin j’ai importé mon fichier sur PhpMyAdmin afin de convertir en MySQL.
 
+## Ergonomie :
+
+Afin d’optimiser l’expérience utilisateur sur le site, j’ai appliqué quelques modifications. J’ai remplacé la partie « qualités » par une partie « compétences » avec un système de bar de progression. Et j’ai supprimé tout les réseaux sociaux sauf LinkedIn. J’ai également intégré une fonctionnalité qui permet de télécharger mon cv en PDF.
