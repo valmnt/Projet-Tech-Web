@@ -11,13 +11,13 @@
 <body>
     <script type="text/javascript" src="/js/main.js"></script>
     <?php
-        require_once(__DIR__ ."./src/home_page.php");
-        require_once(__DIR__ ."./src/presentation.php");
-        require_once(__DIR__ ."./src/skills.php");
-        require_once(__DIR__ ."./src/experiments.php");
-        require_once(__DIR__ ."./src/qualifications_formations.php");
-        require_once(__DIR__ ."./src/projects.php");
-        require_once(__DIR__ ."./src/passions_contact.php");
+        require_once("../src/home_page.php");
+        require_once("../src/presentation.php");
+        require_once("../src/skills.php");
+        require_once("../src/experiments.php");
+        require_once("../src/qualifications_formations.php");
+        require_once("../src/projects.php");
+        require_once("../src/passions_contact.php");
     ?>
 
     <footer>
