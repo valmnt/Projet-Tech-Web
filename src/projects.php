@@ -20,7 +20,7 @@
                         <p class="text_projet">Pour cela nous avons simulé un réseau. C’est à dire que nous avons travaillé avec des</p>
                         <p class="text_projet">machines virtuels afin de simuler les  les postes clients. Nous avons utilisé des routeurs Cisco pour faire </p>
                         <p class="text_projet">communiquer les postes entre eux. Enfin nous avons un serveur web linux afin de simuler un intranet et un serveur windows serveur.</p>
-                        <div class="contenu_img"><img class="reseauimg" src="/img/reseau.png"></div>
+                        <div class="contenu_img"><img class="projectimg" src="/img/reseau.png"></div>
                     </div>
                     </article>    
                     <article class="contenu_onglet2" style="display:none">
@@ -31,7 +31,7 @@
                             <p class="text_projet">plusieurs sections qui sont : Une présentation détaillée (expériences professionnelles, compétences, rubriques libres)</p>
                             <p class="text_projet">, Une section réalisations/Projets et une dernière section page de contact permettant aux visiteurs de nous contacter par</p>
                             <p class="text_projet">le biais d’un formulaire. Nous aurons également une partie administrative pour pouvoir gérer les différentes sections de notre site web.</p>
-                            <div class="contenu_img"><img class="reseauimg" src="/img/logodev.jpg"></div>
+                            <div class="contenu_img"><img class="projectimg" src="/img/logodev.jpg"></div>
                         </div>
                         </article>  
                         <article class="contenu_onglet3" style="display:none">
@@ -42,7 +42,7 @@
                                     <p class="text_projet">plusieurs plantes de la région. Notre base de données doit comprendre plusieurs paramètres tel que : Le nom de la plante, une </p>
                                     <p class="text_projet">catégorisation de la plante, la description, une ou plusieurs photos, L’humidité optimale du sol, la température atmosphérique optimale,</p>
                                     <p class="text_projet"> La luminosité optimale et la période de floraison.</p>
-                                    <div class="contenu_img"><img class="reseauimg" src="/img/arduino.jpg"></div>
+                                    <div class="contenu_img"><img class="projectimg" src="/img/arduino.jpg"></div>
                                 </div>
                             </article> 
     </section>
