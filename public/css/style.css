@@ -981,6 +981,9 @@ footer{
 .textdroit{
     margin-bottom: 25%;
 }
+#block4{
+    padding-top: 20%;
+}
 .sousblock4{
     flex-direction: column;
 }
@@ -1001,6 +1004,9 @@ footer{
 }
 .titreblocdroit{
     height: 55%;
+}
+.block_5{
+    padding-top: 20%;
 }
 #onglet3 {
     width: 40%;
@@ -1031,6 +1037,7 @@ footer{
 .block6gauche{
     width: 100%;
     height: 50%;
+    padding-top: 15%;
 }
 .block6droit{
     width: 100%;
