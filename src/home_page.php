@@ -6,7 +6,7 @@
                 <li><a href="#block2" data-hover="Compétences">Compétences</a></li>
                 <li><a href="#block3" data-hover="Experience">Experience</a></li>
                 <li><a href="#block4" data-hover="Diplomes/formation">Diplomes/formation</a></li>
-                <li><a href="#block5" data-hover="Slide">Slide</a></li>
+                <li><a href="#block5" data-hover="Projets">Projets</a></li>
                 <li><a href="#block6" data-hover="*Passions/Contact">Passions/Contact</a></li>
             </ul>
         </div>

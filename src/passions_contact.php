@@ -1,9 +1,9 @@
 <section id="block6">
-        <div class="block5gauche">
-            <div class="titleblockgauche5">
+        <div class="block6gauche">
+            <div class="titleblockgauche6">
                 <p class="titlegauche">Mes Passions</p>
             </div>
-            <div class="textblockgauche5">
+            <div class="textblockgauche6">
                 <div class="passionparent">
                     <p class="passiontext">Football Americain</p>
                 </div>
@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="block5droit">
-            <div class="form-style">
+        <div class="block6droit">
+            <div class="styleform">
                 <h1>Contact Me</h1>
                 <div class="info">
                     <div class="adressetelephone">

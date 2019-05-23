@@ -510,12 +510,84 @@ html {
     font-size: 200%;
     color: white;
 }
+.block_5{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    height: 700px;
+    background-color: #3E4E50;
+}
+article {
+    padding: 50px;
+    text-align:center;
+
+}
+.all_button{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.conteneur_text{
+    width: 100%;
+}
+#onglet1{
+    margin-right: 5%;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    height: 100%;
+    width: 20%;
+}
+#onglet2{
+    margin-right: 5%;
+    margin-right: 5%;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    height: 100%;
+    width: 20%;
+}
+#onglet3{
+    margin-right: 5%;
+    margin-right: 5%;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    height: 100%;
+    width: 20%;
+}
+#onglet1:hover {
+    background-color: #555555;
+    color: white;
+  }
+  #onglet2:hover {
+    background-color: #555555;
+    color: white;
+  }
+  #onglet3:hover {
+    background-color: #555555;
+    color: white;
+  }
+  .text_projet{
+      color: white;
+  }
+  .contenu_img{
+      height: 15%;
+      width: 100%;
+  }
+  .block{
+      background-color: #3E4E50;
+  }
 #block6{
   width: 100%;
   height: 700px;
   display: flex;
 }
-.block5gauche{
+.block6gauche{
   width: 50%;
   height: 100%;
   background-color: #4B4545;
@@ -527,14 +599,14 @@ html {
   font-family: Verdana;
   font-weight: bold;
 }
-.titleblockgauche5{
+.titleblockgauche6{
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.textblockgauche5{
+.textblockgauche6{
   width: 60%;
   height: 70%;
   margin-left: 19%;
@@ -551,14 +623,14 @@ html {
   font-size: 200%;
   color: white;
 }
-.block5droit{
+.block6droit{
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.form-style{
+.styleform{
 	font: 95% Arial, Helvetica, sans-serif;
 	width: 100%;
   height: 100%;
@@ -566,7 +638,7 @@ html {
 	padding: 16px;
 	background: #F7F7F7;
 }
-.form-style h1{
+.styleform h1{
 	background: #727272;
 	padding: 20px 0;
 	font-size: 180%;
@@ -579,10 +651,10 @@ html {
     height: 15%;
 
 }
-.form-style input[type="text"],
-.form-style input[type="email"],
-.form-style textarea,
-.form-style select
+.styleform input[type="text"],
+.styleform input[type="email"],
+.styleform textarea,
+.styleform select
 {
 	outline: none;
 	box-sizing: border-box;
@@ -594,18 +666,18 @@ html {
 	color: #555;
 	font: 95% Arial, Helvetica, sans-serif;
 }
-.form-style input[type="text"]:focus,
-.form-style input[type="email"]:focus,
-.form-style textarea:focus,
-.form-style select:focus
+.styleform input[type="text"]:focus,
+.styleform input[type="email"]:focus,
+.styleform textarea:focus,
+.styleform select:focus
 {
 	box-shadow: 0 0 5px #727272;
 	padding: 3%;
 	border: 1px solid #727272;
 }
 
-.form-style input[type="submit"],
-.form-style input[type="button"]{
+.styleform input[type="submit"],
+.styleform input[type="button"]{
 	box-sizing: border-box;
 	width: 50%;
 	padding: 3%;
@@ -617,8 +689,8 @@ html {
 	color: #fff;
     margin-left: 50%;
 }
-.form-style input[type="submit"]:hover,
-.form-style input[type="button"]:hover{
+.styleform input[type="submit"]:hover,
+.styleform input[type="button"]:hover{
 	opacity: 0.8;
     cursor: pointer;
 }
@@ -695,51 +767,7 @@ footer{
 .iconefooter:hover{
     opacity: 0.6;
 }
-#block5{
-    width: 100%;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #253237;
-}
-.parentslide{
-    display: flex;
-}
 
-.parent{
-    margin: auto;
-    width: 40%;
-    overflow: hidden;
-    border: white solid;
-}
-.parentbutton{
-    width: 100%;
-    height: 100px;
-    display: flex;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.buttons{
-    margin: 1%;
-    width: 10%;
-    cursor: pointer;
-    background-color: wheat;
-}
-.buttonp{
-    margin: 1%;
-    margin-left: 40%;
-    width: 10%;
-    cursor: pointer;
-    background-color: wheat;
-}
-.parentcontenu{
-    width: 100%;
-    height: 80%;
-}
 @media screen and (max-width: 1600px){
     .moncercle1{
         width: 40%;
@@ -843,39 +871,39 @@ footer{
 .titreblocdroit{
     height: 55%;
 }
+#onglet3 {
+    width: 40%;
+}
+.conteneur_text{
+    width: 100%;
+}
+.all_button{
+    height: 7%;
+}
+.contenu_onglet1{
+    margin: 50px;
+    height: %;
+}
+.contenu_img{
+    width: 100%;
+}
+.reseauimg{
+    width: 100%;
+}
 #block6{
     flex-direction: column;
     height: 1700px;
 }
-.block5gauche{
+.block6gauche{
     width: 100%;
     height: 50%;
 }
-.block5droit{
+.block6droit{
     width: 100%;
     height: 50%;
 }
-.buttons{
-    height: 45%;
-    width: 35%;
-    margin-left: 35%;
 }
-.buttonp{
-    height: 45%;
-    width: 35%;
-    margin-left: 35%;
-}
-.parentbutton{
-    flex-direction: column;
-}
-.parentcontenu{
-    height: 80%;
-}
-.parent{
-    margin-left: 5%;
-    width: 90%;
-}
-}
+ 
 @media screen and (max-width: 640px)
 {
 .parentprofil{
@@ -974,41 +1002,43 @@ footer{
 .titreblocdroit{
     height: 55%;
 }
+#onglet3 {
+    width: 40%;
+}
+.conteneur_text{
+    width: 100%;
+}
+.all_button{
+    height: 7%;
+    width: 100%;
+}
+.contenu_onglet1{
+    padding: 5px;
+}
+.contenu_img{
+    width: 100%;
+}
+.reseauimg{
+    width: 100%;
+}
+.text_projet{
+    margin: 2%;
+}
 #block6{
     flex-direction: column;
     height: 1500px;
 }
-.block5gauche{
+.block6gauche{
     width: 100%;
     height: 50%;
 }
-.block5droit{
+.block6droit{
     width: 100%;
     height: 50%;
 }
 .info{
     margin-bottom: 15%;
     margin-top: 10%;
-}
-.buttons{
-    height: 45%;
-    width: 35%;
-    margin-left: 35%;
-}
-.buttonp{
-    height: 45%;
-    width: 35%;
-    margin-left: 35%;
-}
-.parentbutton{
-    flex-direction: column;
-}
-.parentcontenu{
-    height: 80%;
-}
-.parent{
-    margin-left: 5%;
-    width: 90%;
 }
 .dl{
     width: 40%; 

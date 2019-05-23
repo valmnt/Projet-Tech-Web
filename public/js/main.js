@@ -1,40 +1,33 @@
-window.onload = function() {
-    const parentSlide = document.querySelector('.parentslide');
-    const parentImage = document.querySelectorAll('.parentslide img');
+document.addEventListener('DOMContentLoaded', function() {
 
-    const buttonprev = document.querySelector('.buttonp');
-    const buttonsuiv = document.querySelector('.buttons');
+    var ancien_onglet = document.querySelector('.contenu_onglet1')
 
-    let counter = 1;
-    const size = parentImage[0].clientWidth;
+    function new_onglet() {
+        var n = parseInt(this.id.substr(6, 1))
+        ancien_onglet.style.display = "none"
+        var nouv_onglet = document.querySelector('.contenu_onglet' + n)
+        nouv_onglet.style.display = "block"
+        ancien_onglet = nouv_onglet
+    }
+    document.querySelector('#onglet1').addEventListener("click", new_onglet)
+    document.querySelector('#onglet2').addEventListener("click", new_onglet)
+    document.querySelector('#onglet3').addEventListener("click", new_onglet)
 
-    parentSlide.style.transform = 'translateX('+(-size*counter) + 'px)';
+    document.querySelector('#onglet1').addEventListener("click", changeBackOne)
+    document.querySelector('#onglet2').addEventListener("click", changeBackTwo)
+    document.querySelector('#onglet3').addEventListener("click", changeBackThree)
 
+    function changeBackOne(){
+        document.querySelector('.block_5').style.backgroundColor = "#3E4E50"
+    }
+   
+    function changeBackTwo(){
+        document.querySelector('.block_5').style.backgroundColor = "#52555D"
+    }
+    
+    function changeBackThree(){
+        document.querySelector('.block_5').style.backgroundColor = "#708090"
+    }
+    
 
-    buttonsuiv.addEventListener('click',function () {
-        if (counter >= parentImage.length -1) return;
-        parentSlide.style.transition = "transform 0.4s ease-in-out";
-        counter++;
-        parentSlide.style.transform = 'translateX('+(-size*counter) + 'px)';
-    });
-
-    buttonprev.addEventListener('click',function () {
-            if (counter <= 0) return;
-            parentSlide.style.transition = "transform 0.4s ease-in-out";
-            counter--;
-            parentSlide.style.transform = 'translateX('+(-size*counter) + 'px)';
-    });
-
-        parentSlide.addEventListener('transitionend', function () {
-        if (parentImage[counter].id === 'lastClone'){
-            parentSlide.style.transition = "none";
-            counter = parentImage.length -2;
-            parentSlide.style.transform = 'translateX('+(-size*counter) + 'px)';
-        }
-        if (parentImage[counter].id === 'firstClone') {
-            parentSlide.style.transition = "none";
-            counter = parentImage.length - counter;
-            parentSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-    })
-}
+})
