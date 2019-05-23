@@ -456,7 +456,7 @@ html {
     text-align: center;
 }
 .textblocd{
-    height: 70%;
+    height: 65%;
     width: 100%;
     padding-top: 2%;
 }
@@ -477,13 +477,11 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 22%;
-    padding-right: 20%;
+    text-align: center;
 }
 .texttextdroit{
     font-size: 120%;
     color: white;
-    font-weight: bold;
 }
 .textblockg{
     height: 70%;
@@ -539,6 +537,7 @@ article {
     cursor: pointer;
     height: 100%;
     width: 20%;
+    outline: none;
 }
 #onglet2{
     margin-right: 5%;
@@ -549,6 +548,7 @@ article {
     cursor: pointer;
     height: 100%;
     width: 20%;
+    outline: none;
 }
 #onglet3{
     margin-right: 5%;
@@ -559,6 +559,7 @@ article {
     cursor: pointer;
     height: 100%;
     width: 20%;
+    outline: none;
 }
 #onglet1:hover {
     background-color: #555555;
@@ -781,6 +782,9 @@ footer{
      width: 40%;
      height: 60%;
  }
+ .block_5{
+     padding-top: 8%;
+ }
 }
 @media screen and (max-width: 1400px){
  .textpro{
@@ -871,6 +875,9 @@ footer{
 .titreblocdroit{
     height: 55%;
 }
+.block_5{
+    padding-top: 7%;
+}
 #onglet3 {
     width: 40%;
 }
@@ -882,7 +889,6 @@ footer{
 }
 .contenu_onglet1{
     margin: 50px;
-    height: %;
 }
 .contenu_img{
     width: 100%;
