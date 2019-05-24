@@ -2,7 +2,7 @@
         <div class="titlecompetence">
             <p class="titlecompet">Mes Compétences</p>
         </div>
-        <div class="bar1">
+        <div class="skillsbar">
             <div class="sousboitedroit">
                 <div class="parentss">
 

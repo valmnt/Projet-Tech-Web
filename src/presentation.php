@@ -11,12 +11,12 @@ $sizetab = sizeof($present_tab);
 
 <section id="block1">
         <div class="parentprofil">
-            <p class="profil2">Présentation</p>
+            <p class="presentationtitle">Présentation</p>
         </div>
         <div class="blockone">
             <div class="blocka">
 
-                <div class="ligne">
+               
                     <div class="presentbar">
                     <?php
                         for ($i = 0; $i < $sizetab; $i++){
@@ -24,7 +24,7 @@ $sizetab = sizeof($present_tab);
                         }
                    ?>
                     </div>
-                </div>
+                
                
                 </div>
             </div>
