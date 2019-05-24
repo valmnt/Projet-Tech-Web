@@ -16,7 +16,7 @@ $sizetab = sizeof($presentTab);
         <div class="blockone">
             <div class="blocka">
 
-                <div class="ligne1">
+                <div class="ligne">
                     <div class="presentbar">
                     <?php
                         for ($i = 0; $i < $sizetab; $i++){

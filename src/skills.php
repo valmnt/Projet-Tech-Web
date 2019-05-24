@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="parentbar">
-                        <div class="papa">
+                        <div class="sousparentbar">
                             <div class="parentcolor">
                                 <div class="enfantcolor">80%</div>
                             </div>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="parentbar">
-                        <div class="papa">
+                        <div class="sousparentbar">
                             <div class="parentcolor">
                                 <div class="enfantcolor2">30%</div>
                             </div>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="parentbar">
-                        <div class="papa">
+                        <div class="sousparentbar">
                             <div class="parentcolor">
                                 <div class="enfantcolor3">90%</div>
                             </div>
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="parentbar">
-                        <div class="papa">
+                        <div class="sousparentbar">
                             <div class="parentcolor">
                                 <div class="enfantcolor4">60%</div>
                             </div>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="parentbar">
-                        <div class="papa">
+                        <div class="sousparentbar">
                             <div class="parentcolor">
                                 <div class="enfantcolor5">70%</div>
                             </div>
