@@ -1,6 +1,6 @@
 <?php
 
-$passionsTab = ['Football American', 
+$passions_tab = ['Football American', 
                 'Kikboxing', 
                 'Jeux videos', 
                 'Informatique'];
@@ -15,10 +15,13 @@ $passionsTab = ['Football American',
             </div>
             <div class="textblockgauche6">
                 <div class="passionparent">
-                    <p class="passiontext"><?php 
-                    for ($i = 0; $i < 4; $i++){
-                        print ('<br/>'.$passionsTab[$i].'<br/>');
-                    }?></p>
+                    <p class="passiontext">
+                    <?php 
+                        for ($i = 0; $i < 4; $i++){
+                            print ('<br/>'.$passions_tab[$i].'<br/>');
+                        }
+                        ?>
+                    </p>
                 </div>
                
             </div>

@@ -1,10 +1,10 @@
 <?php
-$presentTab = [ 'Nom : MONT', 
+$present_tab = [ 'Nom : MONT', 
                 'Prénom: Valentin', 
                 'Date de naissance: 15/01/2000', 
                 'Mail: valentin.mont@ynov.com'];
 
-$sizetab = sizeof($presentTab);
+$sizetab = sizeof($present_tab);
 
 ?>
 
@@ -20,7 +20,7 @@ $sizetab = sizeof($presentTab);
                     <div class="presentbar">
                     <?php
                         for ($i = 0; $i < $sizetab; $i++){
-                            print_r ('<br>'.$presentTab[$i].'<br>');
+                            print_r ('<br>'.$present_tab[$i].'<br>');
                         }
                    ?>
                     </div>
