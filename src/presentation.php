@@ -1,3 +1,14 @@
+<?php
+$presentTab = [ 'Nom : MONT', 
+                'Prénom: Valentin', 
+                'Date de naissance: 15/01/2000', 
+                'Mail: valentin.mont@ynov.com'];
+
+$sizetab = sizeof($presentTab);
+
+?>
+
+
 <section id="block1">
         <div class="parentprofil">
             <p class="profil2">Présentation</p>
@@ -6,24 +17,15 @@
             <div class="blocka">
 
                 <div class="ligne1">
-                    <div class="nom">
-                        <p class="nomtext">Nom : MONT</p>
+                    <div class="presentbar">
+                    <?php
+                        for ($i = 0; $i < $sizetab; $i++){
+                            print_r ('<br>'.$presentTab[$i].'<br>');
+                        }
+                   ?>
                     </div>
                 </div>
-                <div class="ligne2">
-                    <div class="nom">
-                        <p class="nomtext">Prénom: Valentin</p>
-                    </div>
-                </div>
-                <div class="ligne3">
-                    <div class="nom">
-                        <p class="nomtext">Date de naissance: 15/01/2000</p>
-                    </div>
-                </div>
-                <div class="ligne4">
-                    <div class="nom">
-                        <p class="nomtext">Mail: valentin.mont@ynov.com</p>
-                    </div>
+               
                 </div>
             </div>
         </div>

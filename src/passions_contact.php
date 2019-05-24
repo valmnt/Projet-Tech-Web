@@ -1,3 +1,13 @@
+<?php
+
+$passionsTab = ['Football American', 
+                'Kikboxing', 
+                'Jeux videos', 
+                'Informatique'];
+
+
+?>
+
 <section id="block6">
         <div class="block6gauche">
             <div class="titleblockgauche6">
@@ -5,17 +15,12 @@
             </div>
             <div class="textblockgauche6">
                 <div class="passionparent">
-                    <p class="passiontext">Football Americain</p>
+                    <p class="passiontext"><?php 
+                    for ($i = 0; $i < 4; $i++){
+                        print ('<br/>'.$passionsTab[$i].'<br/>');
+                    }?></p>
                 </div>
-                <div class="passionparent">
-                    <p class="passiontext">Kickboxing</p>
-                </div>
-                <div class="passionparent">
-                    <p class="passiontext">Jeux videos</p>
-                </div>
-                <div class="passionparent">
-                    <p class="passiontext">Informatique</p>
-                </div>
+               
             </div>
         </div>
         <div class="block6droit">
