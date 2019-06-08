@@ -1,3 +1,20 @@
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+$reponse = $bdd->query('SELECT * FROM graduates');
+$rows = $reponse->fetchAll();
+
+?>
+
+
 <section id="block4">
         <div class="sousblock4">
             <div class="blocdroit">
@@ -22,35 +39,25 @@
                 </div>
             </div>
             <div class="blocgauche">
+           
                 <div class="titreblockd">
-                    <p class="titreblocdroit">Diplômes</p>
+                   <p class="titreblocdroit">Diplômes</p>
                 </div>
                 <div class="textblockg">
-                    <div class="line">
-                        <div class="titleline">
-                            <p class="titletext">Brevet 2015 </p>
-                        </div>
-                        <div class="textline">
-                            <p class="texteline">J’ai obtenu le brevet des collèges en classe de 3eme avec la mention "assez bien".</p>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="titleline">
-                            <p class="titletext">Code / Permis 2017-2018 </p>
-                        </div>
-                        <div class="textline">
-                            <p class="texteline">j’ai obtenu le code et le permis en 2017 et 2018.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="titleline">
-                            <p class="titletext">BAC ES 2018 </p>
-                        </div>
-                        <div class="textline">
-                            <p class="texteline">J’ai été diplômé du Baccalauréat en 2018 avec la mention "assez bien".</p>
-                        </div>
-                    </div>
+            <?php
+            foreach($rows as $rows){
+            echo
+               
+                    '<div class="line">',
+                        '<div class="titleline">',
+                            '<p class="titletext">'.$rows['name'].'</p>',
+                        '</div>',
+                        '<div class="textline">',
+                            '<p class="texteline">'.$rows['date'].'</p>',
+                        '</div>',
+                   '</div>';
+            }
+            ?>
                 </div>
             </div>
         </div>

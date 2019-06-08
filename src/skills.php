@@ -1,94 +1,52 @@
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+
+$reponse = $bdd->query('SELECT * FROM skills');
+$rows = $reponse->fetchAll();
+$nb = 0
+
+
+?>
+
 <section id="block2">
         <div class="titlecompetence">
             <p class="titlecompet">Mes Compétences</p>
         </div>
         <div class="skillsbar">
             <div class="sousboitedroit">
-                <div class="parentss">
 
-                    <div class="parentxt">
-                        <div class="sousparentxt">
-                            <p class="viewbar">HTML/CSS</p>
-                        </div>
-                    </div>
-                    <div class="parentbar">
-                        <div class="sousparentbar">
-                            <div class="parentcolor">
-                                <div class="enfantcolor">80%</div>
-                            </div>
-                        </div>
+                <?php
+                foreach($rows as $rows)
+                {
+                $nb = $nb+1;
+                echo 
+                "<div class='parentss'>",
 
-                    </div>
-                </div>
+                    "<div class='parentxt'>",
+                        "<div class='sousparentxt'",
+                            "<p class='viewbar'>$rows[skills]</p>",
+                        "</div>",
+                    "</div>",
+                    "<div class='parentbar'>",
+                        "<div class='sousparentbar'>",
+                            "<div class='parentcolor'>",
+                                "<div class='enfantcolor$nb'>$rows[level]</div>",
+                            "</div>",
+                        "</div>",
 
-                <div class="parentss">
-
-                    <div class="parentxt">
-                        <div class="sousparentxt">
-                            <p class="viewbar">JAVASCRIPT</p>
-                        </div>
-                    </div>
-                    <div class="parentbar">
-                        <div class="sousparentbar">
-                            <div class="parentcolor">
-                                <div class="enfantcolor2">30%</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="parentss">
-
-                    <div class="parentxt">
-                        <div class="sousparentxt">
-                            <p class="viewbar">CISCO</p>
-                        </div>
-                    </div>
-                    <div class="parentbar">
-                        <div class="sousparentbar">
-                            <div class="parentcolor">
-                                <div class="enfantcolor3">90%</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="parentss">
-
-                    <div class="parentxt">
-                        <div class="sousparentxt">
-                            <p class="viewbar">LANGAGE C</p>
-                        </div>
-                    </div>
-                    <div class="parentbar">
-                        <div class="sousparentbar">
-                            <div class="parentcolor">
-                                <div class="enfantcolor4">60%</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="parentss">
-
-                    <div class="parentxt">
-                        <div class="sousparentxt">
-                            <p class="viewbar">SQL</p>
-                        </div>
-                    </div>
-                    <div class="parentbar">
-                        <div class="sousparentbar">
-                            <div class="parentcolor">
-                                <div class="enfantcolor5">70%</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+                    "</div>",
+                "</div>";
+                }
+                ?>
             </div>
         </div>
 

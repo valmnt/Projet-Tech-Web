@@ -283,6 +283,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 150%;
+    color:wheat;
 
 }
 .parentcolor{
@@ -298,23 +300,25 @@ html {
     justify-content: center;
     align-items: center;
 }
-.enfantcolor{
-    width: 80%;
+.enfantcolor1{
+    
     height: 100%;
     background-color: wheat;
     border-radius: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:120%;
 }
 .enfantcolor2{
-    width: 30%;
+    width: 60%;
     height: 100%;
     background-color: wheat;
     border-radius: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:120%;
 }
 .enfantcolor3{
     width: 90%;
@@ -324,6 +328,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:120%;
 }
 .enfantcolor4{
     width: 60%;
@@ -333,6 +338,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:120%;
 }
 .enfantcolor5{
     width: 70%;
@@ -342,6 +348,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:120%;
 }
 #block3{
     height: 1000px;
@@ -754,15 +761,17 @@ footer{
  }
 }
 @media screen and (max-width: 1400px){
- .textpro{
-     font-size: 120%;
- }
+    .textpro{
+        width: 90%;
+        font-size: 100%;
+    }
  }
  @media screen and (max-width: 1000px){
     
-.textpro{
-    font-size: 100%;
-}
+    .textpro{
+        width: 90%;
+        font-size: 100%;
+    }
 .titreblocdroit{
     font-size: 190%;
 }
@@ -799,9 +808,7 @@ footer{
  .designebar a{
    font-size: 80%;
  }
- .viewbar{
-    font-size: 100%;
-}
+
 .sousboitedroit{
     padding-left: 5%;
 }
@@ -896,7 +903,8 @@ footer{
     font-size: 150%;
 }
 .textpro{
-    font-size: 80%;
+    width: 90%;
+    font-size: 100%;
 }
 .titreblocdroit{
     font-size: 120%;
@@ -935,7 +943,22 @@ footer{
 .barmenu{
   height: 90px;
 }
-.viewbar{
+.sousparentxt{
+    font-size: 100%;
+}
+.enfantcolor1{
+    font-size: 100%;
+}
+.enfantcolor2{
+    font-size: 100%;
+}
+.enfantcolor3{
+    font-size: 100%;
+}
+.enfantcolor4{
+    font-size: 100%;
+}
+.enfantcolor5{
     font-size: 100%;
 }
 .sousboitedroit{

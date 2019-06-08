@@ -1,12 +1,50 @@
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+
+$reponse = $bdd->query('SELECT * FROM experience_pro');
+$rows = $reponse->fetchAll();
+
+
+
+
+?>
+
 <section id="block3">
         <section id="block3">
             <div class="experiencepro">
                 <div class="titlexperience">
                     <p class="titlexpro">Expériences Professionnelles</p>
                 </div>
+
+
                 <div class="textexperience">
-                    <p class="textpro">J’ai eu l’opportunité lors de ma classe de 3ème de pouvoir faire un stage en entreprise. A travers ce stage d’une semaine j’ai pu découvrir les différents domaines et postes d’une entreprise comme la comptabilité, le marketing ou encore le service après vente. Puis Durant l’été 2018 j’ai travaillé une quinzaine de jours chez TCL en tant qu’amont guichet. Ma mission était de réaliser des abonnements pour les clients.
-                    </p>
+                    <div class="textpro">
+                    
+                    
+                    <?php
+                    
+                        foreach($rows as $rows){
+                           echo 
+                          "<div class='exp' style='width: 100%; height: 25%; display:flex;'>
+                          <div class='elementexp' style='width:100%; height: 100%;'>$rows[company]</div>
+                          <div class='elementexp' style='width:100%; height: 100%;'>$rows[date_start]</div>
+                          <div class='elementexp' style='width:100%; height: 100%;'>$rows[date_end]</div>
+                          <div class='elementexp' style='width:100%; height: 100%;'>$rows[posts]</div></div>";
+                        }
+                    ?>
+
+                    
+                    </div>
+
                 </div>
 
                 <div class="trait"></div>
