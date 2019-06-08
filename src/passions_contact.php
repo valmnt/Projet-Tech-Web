@@ -1,7 +1,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch(Exception $e)
@@ -13,7 +13,7 @@ if (isset($_POST['field1']) and isset($_POST['field2']) and isset($_POST['field3
     $field2 = $_POST['field2'];
     $field3 = $_POST['field3'];
     
-    $STH = $bdd->prepare('INSERT INTO form(name, email, text) VALUES (:field1, :field2, :field3)');
+    $STH = $bdd->prepare('INSERT INTO contact(nom, mail, message) VALUES (:field1, :field2, :field3)');
     $STH->bindParam(':field1', $field1);
     $STH->bindParam(':field2', $field2);
     $STH->bindParam(':field3', $field3);
@@ -21,7 +21,7 @@ if (isset($_POST['field1']) and isset($_POST['field2']) and isset($_POST['field3
 
 }
 
-$reponse = $bdd->query('SELECT * FROM passion');
+$reponse = $bdd->query('SELECT * FROM passions');
 $rows = $reponse->fetchAll();
 
 ?>
@@ -36,7 +36,7 @@ $rows = $reponse->fetchAll();
                     <p class="passiontext">
                     <?php 
                         foreach ($rows as $rows){
-                            print ('<br/>'.$rows['passions'].'<br/>');
+                            print ('<br/>'.$rows['NOM'].'<br/>');
                         }
                         ?>
                     </p>

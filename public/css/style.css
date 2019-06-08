@@ -379,6 +379,8 @@ html {
 .textpro{
     width: 50%;
     font-size: 150%;
+    display: flex;
+    justify-content: center;
 }
 .trait{
     width: 70%;

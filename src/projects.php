@@ -15,7 +15,7 @@
                 <article class="contenu_onglet1" style="display:block">
                     <div class="conteneur_text">
                         <p class="text_projet">La société Inventaire+ est une société qui fait des inventaires en pharmacies, en points presse et bureaux de tabac. </p>
-                        <p class="text_projet">.L'équipement utilisé par la société est obsolète et elle nous demande de mettre à jour tout son matériel informatique afin</p>
+                        <p class="text_projet">L'équipement utilisé par la société est obsolète et elle nous demande de mettre à jour tout son matériel informatique afin</p>
                         <p class="text_projet">de faciliter la visibilité et l'accessibilité sur les activités de ses clients.</p>
                         <p class="text_projet">Pour cela nous avons simulé un réseau. C’est à dire que nous avons travaillé avec des</p>
                         <p class="text_projet">machines virtuels afin de simuler les  les postes clients. Nous avons utilisé des routeurs Cisco pour faire </p>

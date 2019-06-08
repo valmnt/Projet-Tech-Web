@@ -1,7 +1,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch(Exception $e)
@@ -9,7 +9,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-$reponse = $bdd->query('SELECT * FROM graduates');
+$reponse = $bdd->query('SELECT * FROM formation');
 $rows = $reponse->fetchAll();
 
 ?>
@@ -50,10 +50,10 @@ $rows = $reponse->fetchAll();
                
                     '<div class="line">',
                         '<div class="titleline">',
-                            '<p class="titletext">'.$rows['name'].'</p>',
+                            '<p class="titletext">'.$rows['DIPLOME'].'</p>',
                         '</div>',
                         '<div class="textline">',
-                            '<p class="texteline">'.$rows['date'].'</p>',
+                            '<p class="texteline">'.$rows['DATEDEBUT'].' - '. $rows['DATEFIN'].'</p>',
                         '</div>',
                    '</div>';
             }

@@ -1,7 +1,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=bdd_techweb_mont;charset=utf8', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch(Exception $e)
@@ -10,7 +10,7 @@ catch(Exception $e)
 }
 
 
-$reponse = $bdd->query('SELECT * FROM skills');
+$reponse = $bdd->query('SELECT * FROM competence');
 $rows = $reponse->fetchAll();
 $nb = 0
 
@@ -33,13 +33,13 @@ $nb = 0
 
                     "<div class='parentxt'>",
                         "<div class='sousparentxt'",
-                            "<p class='viewbar'>$rows[skills]</p>",
+                            "<p class='viewbar'>$rows[NOM]</p>",
                         "</div>",
                     "</div>",
                     "<div class='parentbar'>",
                         "<div class='sousparentbar'>",
                             "<div class='parentcolor'>",
-                                "<div class='enfantcolor$nb'>$rows[level]</div>",
+                                "<div class='enfantcolor$nb'>$rows[NIVEAU]</div>",
                             "</div>",
                         "</div>",
 
