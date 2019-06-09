@@ -10,10 +10,7 @@ catch(Exception $e)
 }
 
 
-$reponse = $bdd->query('SELECT * FROM experience');
-$rows = $reponse->fetchAll();
-
-$answer = $bdd->query('SELECT NOM FROM structures WHERE ID = 1 or ID= 3 or ID=4');
+$answer = $bdd->query('SELECT structures.NOM, POSTE, DATEDEFIN FROM structures, experience WHERE structures.id = experience.IDSTRUCTURES');
 $row = $answer->fetchAll();
 
 
@@ -30,39 +27,25 @@ $row = $answer->fetchAll();
                 <div class="textexperience">
                     <div class="textpro">
                     
-                    <div class="textpro1" style="width:25%; height:100%;">
+                    
                     <?php
                     foreach($row as $row){
                         echo 
-                       "<div class='exp' style='width: 100%; height: 25%; display:flex;'>
-                       <div class='elementexp' style='width:100%; height: 100%;'>- $row[NOM]</div></div>";
+                        "<div class='textpro1' style='width:25%; height:100%; margin-right:4%;'>",
+                       "<div class='exp' style='width: 100%; height: 25%; display:flex;'>",
+                       "<div class='elementexp' style='width:100%; height: 100%;'>$row[NOM]</div></div>",
+
+                       
+                        "<div class='exp' style='width: 100%; height: 25%; display:flex;'>",
+                        "<div class='elementexp' style='width:100%; height: 100%;'>$row[POSTE]</div></div>",
+
+                        
+                        "<div class='exp' style='width: 100%; height: 25%; display:flex;'>",
+                        "<div class='elementexp' style='width:100%; height: 100%;'>$row[DATEDEFIN]</div></div></div>";
+
                     }
                     ?>
-                    </div>
-                    <div class="textpro2" style="width:25%; height:100%;">
-                    <?php
-                        
-                        foreach($rows as $ro){
-                            echo 
-                           "<div class='exp' style='width: 100%; height: 25%; display:flex;'>
-                           <div class='elementexp' style='width:100%; height: 100%;'>$ro[POSTE]</div></div>";
- 
-                         }     
-                         
-                    ?>
-                    </div>
-                    <div class="textpro3" style="width:25%; height:100%;">
-                    <?php
-                        
-                        foreach($rows as $rows){
-                            echo 
-                           "<div class='exp' style='width: 100%; height: 25%; display:flex;'>
-                           <div class='elementexp' style='width:100%; height: 100%;'>$rows[DATEDEFIN]</div></div>";
- 
-                         }     
-                         
-                    ?>
-                    </div>
+                    
                     </div>
 
                 </div>

@@ -1,10 +1,16 @@
 <?php
-$present_tab = [ 'Nom : MONT', 
-                'Prénom: Valentin', 
-                'Date de naissance: 15/01/2000', 
-                'Mail: valentin.mont@ynov.com'];
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
 
-$sizetab = sizeof($present_tab);
+$reponse = $bdd->query('SELECT * FROM infoperso');
+$rows = $reponse->fetchAll();
 
 ?>
 
@@ -19,8 +25,11 @@ $sizetab = sizeof($present_tab);
                
                     <div class="presentbar">
                     <?php
-                        for ($i = 0; $i < $sizetab; $i++){
-                            print_r ('<br>'.$present_tab[$i].'<br>');
+                        foreach ($rows as $rows){
+                            print_r ('<br>Nom :'.$rows['LASTNAME'].'<br>');
+                            print_r ('<br>Prenom :'.$rows['FIRSTNAME'].'<br>');
+                            print_r ('<br>Date de naissance :'.$rows['BIRTHDAY'].'<br>');
+                            print_r ('<br>Mail :'.$rows['MAIL'].'<br>');
                         }
                    ?>
                     </div>

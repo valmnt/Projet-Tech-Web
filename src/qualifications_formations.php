@@ -12,6 +12,10 @@ catch(Exception $e)
 $reponse = $bdd->query('SELECT * FROM formation');
 $rows = $reponse->fetchAll();
 
+$answer = $bdd->query('SELECT DOMAINE, NOM FROM formation, structures WHERE structures.id = formation.IDSTRUCTURES and formation.id IN (1,2)');
+$row = $answer->fetchAll();
+
+
 ?>
 
 
@@ -21,22 +25,21 @@ $rows = $reponse->fetchAll();
                 <div class="titreblockd">
                     <p class="titreblocdroit">Formation</p>
                 </div>
-                <div class="textblocd">
-                    <div class="titleblocd">
-                        <p class="texttitleblocd">Lycée</p>
-                    </div>
-                    <div class="textdroit">
-                        <p class="texttextdroit">J’ai fait une seconde général puis je me suis orienté en Economie Social à partir de la première.</p>
-                    </div>
-                    <div class="textblocd">
-                        <div class="titleblocd">
-                            <p class="texttitleblocd">Ecole d'Informatique</p>
-                        </div>
-                        <div class="textdroit">
-                            <p class="texttextdroit">Actuellement, je suis en première année d'Informatique.</p>
-                        </div>
-                    </div>
-                </div>
+                  <div class='textblocd'>
+                <?php
+                foreach($row as $row){
+                echo
+             
+                    "<div class='titleblocd'>",
+                       " <p class='texttitleblocd'>$row[DOMAINE]</p>",
+                    "</div>",
+                    "<div class='textdroit'>",
+                    "<p class='texttextdroit'>$row[NOM]</p>",
+                "</div>";
+                }
+                
+                ?>
+            </div>
             </div>
             <div class="blocgauche">
            

@@ -440,6 +440,7 @@ html {
     align-items: center;
     justify-content: center;
     height: 20%;
+    margin-top: 4%;
 }
 .texttitleblocd{
     font-size: 150%;
@@ -447,12 +448,13 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .textdroit{
-    height: 20%;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 .texttextdroit{
     font-size: 120%;
