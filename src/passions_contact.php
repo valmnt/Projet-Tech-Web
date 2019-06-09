@@ -47,13 +47,15 @@ $rows = $reponse->fetchAll();
         <div class="block6droit">
             <div class="styleform">
                 <h1>Contact Me</h1>
+                <div class='alertbox'>
                 <?php
                         if (isset($_POST['field1']) or isset($_POST['field2']) or isset($_POST['field3'])){
                         if(empty($_POST['field1']) or empty($_POST['field2']) or empty($_POST['field3']) ){
-                            echo "<div style='height: 4%; width:100%; display:flex; align-items:center; justify-content:center;'><div class='alerrt' style='display:flex; align-items:center; justify-content:center; box-shadow: 6px 2px 2px gray; width:40%; background-color:#f44336; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs</div></div>";
+                            echo "<div class='alert' style='display:flex; align-items:center; justify-content:center;  width:40%; background-color:#727272; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs !</div>";
                         }
                     }
                         ?>
+                        </div>
                 <div class="info">
                     <div class="adressetelephone">
                         <div class="img"><i class="fas fa-map-marker-alt"></i></div>
