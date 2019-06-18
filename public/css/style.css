@@ -300,8 +300,8 @@ html {
     justify-content: center;
     align-items: center;
 }
-.enfantcolor1{
-    
+.enfantcolor{
+
     height: 100%;
     background-color: wheat;
     border-radius: 150px;
@@ -310,46 +310,7 @@ html {
     align-items: center;
     font-size:120%;
 }
-.enfantcolor2{
-    width: 60%;
-    height: 100%;
-    background-color: wheat;
-    border-radius: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:120%;
-}
-.enfantcolor3{
-    width: 90%;
-    height: 100%;
-    background-color: wheat;
-    border-radius: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:120%;
-}
-.enfantcolor4{
-    width: 60%;
-    height: 100%;
-    background-color: wheat;
-    border-radius: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:120%;
-}
-.enfantcolor5{
-    width: 70%;
-    height: 100%;
-    background-color: wheat;
-    border-radius: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:120%;
-}
+
 #block3{
     height: 1000px;
     width: 100%;

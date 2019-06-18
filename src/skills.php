@@ -27,7 +27,6 @@ $nb = 0
                 <?php
                 foreach($rows as $rows)
                 {
-                $nb = $nb+1;
                 echo 
                 "<div class='parentss'>",
 
@@ -39,7 +38,7 @@ $nb = 0
                     "<div class='parentbar'>",
                         "<div class='sousparentbar'>",
                             "<div class='parentcolor'>",
-                                "<div class='enfantcolor$nb'>$rows[NIVEAU]</div>",
+                                "<div class='enfantcolor' style='width:$rows[NIVEAU]%;'>$rows[NIVEAU]</div>",
                             "</div>",
                         "</div>",
 
