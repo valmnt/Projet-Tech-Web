@@ -8,7 +8,7 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-if (isset($_POST['field1']) and isset($_POST['field2']) and isset($_POST['field3'])){
+if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['field3'])){
     $field1 = $_POST['field1'];
     $field2 = $_POST['field2'];
     $field3 = $_POST['field3'];
@@ -49,11 +49,9 @@ $rows = $reponse->fetchAll();
                 <h1>Contact Me</h1>
                 <div class='alertbox'>
                 <?php
-                        if (isset($_POST['field1']) or isset($_POST['field2']) or isset($_POST['field3'])){
                         if(empty($_POST['field1']) or empty($_POST['field2']) or empty($_POST['field3']) ){
                             echo "<div class='alert' style='display:flex; align-items:center; justify-content:center;  width:40%; background-color:#727272; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs !</div>";
                         }
-                    }
                         ?>
                         </div>
                 <div class="info">
