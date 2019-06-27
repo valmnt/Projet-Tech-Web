@@ -50,7 +50,7 @@ Etant une base de donnée pour un curriculum j'ai crée les tables suivantes:
 * contact --> formulaire de contact
 * structure --> contient les infrastructure liées aux expériences et aux formations
 
-*deux tables intermédiaires (qui feront le lien entre certaines tables) :*
+*et deux tables intermédiaires (qui feront le lien entre certaines tables) :*
 
 * competence_experience
 * competence_formation
