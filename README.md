@@ -23,7 +23,7 @@ du site.
 
 * Le javascript a permis de rendre le site plus intéractif
 * Un système d'onglet a été réalisé afin d'exposer mes différents projets informatique
-* Chaques onglets est différents des autres *la couleur de fond, le texte ainsi que les images sont différents*
+* Chaques onglets est différents des autres (*la couleur de fond, le texte ainsi que les images sont différents*)
 
 *Sytème d'onglets*
 
