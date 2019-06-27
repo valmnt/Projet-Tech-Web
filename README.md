@@ -1,21 +1,71 @@
-# Document technique du projet Tech&Web
+ # Document technique du projet Tech&Web
 
-## Descriptif du projet :
+## Objectif du site :
 
-Dans le cadre de nos études, nous serons amenés à présenter notre travail à des tiers, par le biais d’un CV ainsi que des exemples de réalisations. Nous devons donc concevoir un site web qui doit être notre curriculum. Notre site web doit comporter plusieurs sections qui sont : Une présentation détaillée (expériences professionnelles, compétences, rubriques libres), Une section réalisations/Projets et une dernière section page de contact permettant aux visiteurs de nous contacter par le biais d’un formulaire. Nous aurons également une partie administrative pour pouvoir gérer les différentes sections de notre site web. Afin de concevoir cela, pour commencer j’ai établi mon curriculum sur papier afin de bien distinguer les grandes lignes de mon site. Une fois cela fait, j’ai établi un schéma merise me permettant de visualiser schématiquement mon site. Par la suite, je me suis interrogé sur le désigne du site. Une fois tous ces prérequis réalisé je me suis lancé dans le développement en utilisant HTML/CSS.
+Ce site a été conçu dans le but d'avoir un curriculum en ligne. Bien entendu, étant étudiant en école d'informatique un curriculum en papier aurait très peu de valeur.
+C'est pour cela que j'ai developpé ce site web avec des technologies différentes ayant pour chacune un rôle bien définit dans la conception et le fonctionnement 
+du site.
 
-## Schéma Merise :
+## Sommaire 
 
-![merise](/img/MONT_VALENTIN_MERISE.PNG)
+* Html / Css
+* Javascript
+* Merise / Sql
+* Php
+
+## Html / Css
+
+* L'html et le css ont été les premières technologies à avoir été utilisé
+* Elles m'ont permit de concevoir l'esthétisme de mon site web
+* L'html et le css ont également été utilisé dans le but de rendre le site responsive
 
 ## Javascript
 
-Après avoir établie l’HTML et le CSS, j’ai inséré du Javascript sur mon site. J’ai trouvé après mure réflexion qu’un carrousel pourrai être un bonne idée. Je n’ai pas encore décidé quelles images contiendra mon carrousel mais j’ai des idées en tête par exemple : Il pourrait contenir tous mes diplômes qu’on pourra consulter en faisant défilé le slider ou il pourra aussi être utiliser afin de mettre en avant toutes les entreprises ou j’ai travaillé… Ce qui est sûr c’est qu’il permettra de consulter des informations à mon sujet de manière simple et efficace.
+* Le javascript a permis de rendre le site plus intéractif
+* Un système d'onglet a été réalisé afin d'exposer mes différents projets informatique
+* Chaques onglets est différents des autres *la couleur de fond, le texte ainsi que les images sont différents*
 
-## Ajout du SQL :
+*Sytème d'onglets*
 
-J’ai créé une base de données sous oracle avec le logiciel oracle sql developer. Je n’ai pas repris exactement mon schéma merise pour réaliser ma base de données. En pratique, le schéma n’était pas simple à réaliser et donc j’ai revue la conception théorique de la bdd. Dans la base de données, j’ai créé 9 tables : compétence, infoperso, contact, passions, formation, expérience, structures et dont 2 tables intermédiaires qui sont competence_formation et competence_experience qui font le lien entre les tables compétence, expérience et formation.Et ensuite j’ai inséré les information à on sujet dans les tables adéquats. Enfin j’ai importé mon fichier sur PhpMyAdmin afin de convertir en MySQL.
+![merise](/img/onglets.PNG)
 
-## Ergonomie :
+## Merise Sql
 
-Afin d’optimiser l’expérience utilisateur sur le site, j’ai appliqué quelques modifications. J’ai remplacé la partie « qualités » par une partie « compétences » avec un système de bar de progression. Et j’ai supprimé tout les réseaux sociaux sauf LinkedIn. J’ai également intégré une fonctionnalité qui permet de télécharger mon cv en PDF.
+### Merise
+
+Merise a permis de représenter schématiquement ma base de donnée
+
+![merise](/img/MONT_VALENTIN_MERISE.PNG)
+
+### Sql
+
+Après avoir réalisé la partie théorique de la base de donnée, je l'ai mis en pratique.
+Etant une base de donnée pour un curriculum j'ai crée les tables suivantes:
+
+* Infoperso --> informations générales à mon sujets (nom, prénom...)
+* Competence
+* Experience
+* Formation
+* passions
+* contact --> formulaire de contact
+* structure --> contient les infrastructure liées aux expériences et aux formations
+
+*deux tables intermédiaires (qui feront le lien entre certaines tables) :*
+
+* competence_experience
+* competence_formation
+
+## Php
+
+Le php est présent en majorité sur mon site pour les raisons suivantes :
+
+* Permet de dynamiser le site, plus besoin de repasser par du code pour rajouter de nouveaux éléments (experiences, compétences, passions...)
+* Permet de lier notre site avec une base de donner PhpMyAdmin
+* Permet de gérer le contenue du site depuis une page administration, qui a un système de login pour éviter que tout le monde puisse modifier le contenu du site
+* Permet d'éviter de répéter du code manuellement
+
+*Page d'adminsitration*
+
+![admin](/img/admin.PNG)
+
+
