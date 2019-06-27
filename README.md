@@ -29,7 +29,7 @@ du site.
 
 ![merise](/img/onglets.PNG)
 
-## Merise Sql
+## Merise / Sql
 
 ### Merise
 
