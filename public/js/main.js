@@ -28,6 +28,5 @@ document.addEventListener('DOMContentLoaded', function() {
     function changeBackThree(){
         document.querySelector('.block_5').style.backgroundColor = "#708090"
     }
-    
 
 })

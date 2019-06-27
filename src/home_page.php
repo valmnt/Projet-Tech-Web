@@ -15,13 +15,11 @@
                 <div class="photo1">
                     <img class="photo" src="/img/RenaudMargairaz _ Portrait2017.jpg"></div>
                 <div class="name">
-
                     <p class="textname">Valentin Mont</p>
                 </div>
                 <div class="textjob">
                     <p class="job">Etudiant en Informatique</p>
                 </div>
-
                 <div class="iconesocial">
                     <div class="dl"><a class="dltexte" href="/img/CV.pdf" download="cv_mont_valentin.pdf">Télécharger le CV</a></div>
                     <div class="icone"><a href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></div>

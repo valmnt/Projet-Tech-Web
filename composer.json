@@ -1,0 +1,16 @@
+{
+    "name": "val/projet_php",
+    "description": "c'est un test",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Mont",
+            "email": "valentin.mont@ynov.com"
+        }
+    ],
+  "autoload": { "psr-4": { "ValCv\\": "src/" } },  "require": {
+        "swiftmailer/swiftmailer": "^6.2",
+        "symfony/finder": "^4.3"
+    }
+}
