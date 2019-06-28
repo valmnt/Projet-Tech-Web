@@ -1,20 +1,20 @@
 <?php
-require_once(__DIR__.'/../../../src/template/footer.php');
-require_once(__DIR__.'/../../../src/template/header.php');
-require_once(__DIR__.'/../../../src/security/CheckLogin.php');
-require_once(__DIR__.'/../../../src/init/admin.php');
+require_once __DIR__.'/../../../src/template/footer.php';
+require_once __DIR__.'/../../../src/template/header.php';
+require_once __DIR__.'/../../../src/security/CheckLogin.php';
+require_once __DIR__.'/../../../src/init/admin.php';
 
 try
 {
-  $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-  $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
 
-if(isset($_GET['delete_item_index'])){
+if(isset($_GET['delete_item_index'])) {
     $delete_item = $_GET['delete_item_index'];
     $del = $bdd->prepare("DELETE FROM competence WHERE ID = $delete_item");
     $del->execute();
@@ -22,14 +22,14 @@ if(isset($_GET['delete_item_index'])){
    
 }
 
-if (isset($_POST['compt'])){
-$compt = $_POST['compt'];
-$niveau = $_POST['niveau'];
+if (isset($_POST['compt'])) {
+    $compt = $_POST['compt'];
+    $niveau = $_POST['niveau'];
 
-$STH = $bdd->prepare('INSERT INTO competence(NOM, NIVEAU, IDINFO) VALUES (:compt, :niveau, 1)');
-$STH->bindParam(':compt', $compt);
-$STH->bindParam(':niveau', $niveau);
-$STH->execute();
+    $STH = $bdd->prepare('INSERT INTO competence(NOM, NIVEAU, IDINFO) VALUES (:compt, :niveau, 1)');
+    $STH->bindParam(':compt', $compt);
+    $STH->bindParam(':niveau', $niveau);
+    $STH->execute();
 
 
 }
@@ -63,27 +63,27 @@ $rows = $reponse->fetchAll();
   </div>
         
         <div class="container">
-          <?php
-          if (empty($rows)){
-            echo
-            "<div class='alert alert-success' role='alert'>",
+            <?php
+            if (empty($rows)) {
+                echo
+                "<div class='alert alert-success' role='alert'>",
                 "La liste de compétence est vide. 👌",
-            "</div>";
-          }
-          else{
-           echo 
-            "<table class='table'>";
+                "</div>";
+            }
+            else{
+                echo 
+                "<table class='table'>";
               
-            foreach ($rows as $compt)
+                foreach ($rows as $compt)
                  {
-                ?>
+                    ?>
                     <tr>
-                        <th width='250px'><?= $compt['NOM'] ?></th>
-                        <td> <?= $compt['NIVEAU'] ?></td>
+                        <th width='250px'><?php echo $compt['NOM'] ?></th>
+                        <td> <?php echo $compt['NIVEAU'] ?></td>
                         <td style='text-align: right'><a href='http://portfolio.local/admin/skills/skills.php/index.php?delete_item_index= <?php echo $compt['ID']; ?>'>Supprimer</a><td>
                     </tr>
-              <?php   }
-                }?>
+                <?php   }
+            }?>
                 
             </table>
             <hr />

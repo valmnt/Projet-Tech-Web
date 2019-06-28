@@ -2,13 +2,13 @@
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['field3'])){
+if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['field3'])) {
     $field1 = $_POST['field1'];
     $field2 = $_POST['field2'];
     $field3 = $_POST['field3'];
@@ -35,10 +35,10 @@ $rows = $reponse->fetchAll();
                 <div class="passionparent">
                     <p class="passiontext">
                     <?php 
-                        foreach ($rows as $rows){
-                            print ('<br/>'.$rows['NOM'].'<br/>');
-                        }
-                        ?>
+                    foreach ($rows as $rows){
+                        print ('<br/>'.$rows['NOM'].'<br/>');
+                    }
+                    ?>
                     </p>
                 </div>
                
@@ -49,10 +49,10 @@ $rows = $reponse->fetchAll();
                 <h1>Contact Me</h1>
                 <div class='alertbox'>
                 <?php
-                        if(empty($_POST['field1']) or empty($_POST['field2']) or empty($_POST['field3']) ){
-                            echo "<div class='alert' style='display:flex; align-items:center; justify-content:center;  width:40%; background-color:#727272; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs !</div>";
-                        }
-                        ?>
+                if(empty($_POST['field1']) or empty($_POST['field2']) or empty($_POST['field3']) ) {
+                    echo "<div class='alert' style='display:flex; align-items:center; justify-content:center;  width:40%; background-color:#727272; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs !</div>";
+                }
+                ?>
                         </div>
                 <div class="info">
                     <div class="adressetelephone">

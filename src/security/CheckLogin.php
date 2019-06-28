@@ -12,9 +12,8 @@ class CheckLogin
 
     public function check(): void
     {
-        if (
-            !isset($_SESSION['is_logged_in']) ||
-            $_SESSION['is_logged_in'] === false
+        if (!isset($_SESSION['is_logged_in']) 
+            || $_SESSION['is_logged_in'] === false
         ) {
             header('Location: http://portfolio.local/admin/login');
             exit();

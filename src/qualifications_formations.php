@@ -2,7 +2,7 @@
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
@@ -28,14 +28,14 @@ $row = $answer->fetchAll();
                   <div class='textblocd'>
                 <?php
                 foreach($row as $row){
-                echo
+                    echo
              
                     "<div class='titleblocd'>",
                        " <p class='texttitleblocd'>$row[DOMAINE]</p>",
                     "</div>",
                     "<div class='textdroit'>",
                     "<p class='texttextdroit'>$row[NOM]</p>",
-                "</div>";
+                    "</div>";
                 }
                 
                 ?>
@@ -49,7 +49,7 @@ $row = $answer->fetchAll();
                 <div class="textblockg">
             <?php
             foreach($rows as $rows){
-            echo
+                echo
                
                     '<div class="line">',
                         '<div class="titleline">',

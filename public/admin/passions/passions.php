@@ -1,20 +1,20 @@
 <?php
-require_once(__DIR__.'/../../../src/template/footer.php');
-require_once(__DIR__.'/../../../src/template/header.php');
-require_once(__DIR__.'/../../../src/security/CheckLogin.php');
-require_once(__DIR__.'/../../../src/init/admin.php');
+require_once __DIR__.'/../../../src/template/footer.php';
+require_once __DIR__.'/../../../src/template/header.php';
+require_once __DIR__.'/../../../src/security/CheckLogin.php';
+require_once __DIR__.'/../../../src/init/admin.php';
 
 try
 {
-  $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-  $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
 
-if(isset($_GET['delete_item_index'])){
+if(isset($_GET['delete_item_index'])) {
     $delete_item = $_GET['delete_item_index'];
     $del = $bdd->prepare("DELETE FROM passions WHERE ID = $delete_item");
     $del->execute();
@@ -22,12 +22,12 @@ if(isset($_GET['delete_item_index'])){
    
 }
 
-if (isset($_POST['passion'])){
-$passion = $_POST['passion'];
+if (isset($_POST['passion'])) {
+    $passion = $_POST['passion'];
 
-$STH = $bdd->prepare('INSERT INTO passions(NOM, IDINFOPERSO) VALUES (:passion, 1)');
-$STH->bindParam(':passion', $passion);
-$STH->execute();
+    $STH = $bdd->prepare('INSERT INTO passions(NOM, IDINFOPERSO) VALUES (:passion, 1)');
+    $STH->bindParam(':passion', $passion);
+    $STH->execute();
 
 
 }
@@ -61,26 +61,26 @@ $rows = $reponse->fetchAll();
   </div>
         
         <div class="container">
-          <?php
-          if (empty($rows)){
-            echo
-            "<div class='alert alert-success' role='alert'>",
+            <?php
+            if (empty($rows)) {
+                echo
+                "<div class='alert alert-success' role='alert'>",
                 "La liste de passion est vide. 👌",
-            "</div>";
-          }
-          else{
-           echo 
-            "<table class='table'>";
+                "</div>";
+            }
+            else{
+                echo 
+                "<table class='table'>";
               
-            foreach ($rows as $passion)
+                foreach ($rows as $passion)
                  {
-                ?>
+                    ?>
                     <tr>
-                        <th width='250px'><?= $passion['NOM'] ?></th>
+                        <th width='250px'><?php echo $passion['NOM'] ?></th>
                         <td style='text-align: right'><a href='http://portfolio.local/admin/passions/passions.php/index.php?delete_item_index= <?php echo $passion['ID']; ?>'>Supprimer</a><td>
                     </tr>
-              <?php   }
-                }?>
+                <?php   }
+            }?>
                 
             </table>
             <hr />

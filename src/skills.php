@@ -2,7 +2,7 @@
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
@@ -27,8 +27,8 @@ $nb = 0
                 <?php
                 foreach($rows as $rows)
                 {
-                echo 
-                "<div class='parentss'>",
+                    echo 
+                    "<div class='parentss'>",
 
                     "<div class='parentxt'>",
                         "<div class='sousparentxt'",
@@ -43,7 +43,7 @@ $nb = 0
                         "</div>",
 
                     "</div>",
-                "</div>";
+                    "</div>";
                 }
                 ?>
             </div>

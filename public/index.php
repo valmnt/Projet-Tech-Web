@@ -11,14 +11,14 @@
 <body>
     <script type="text/javascript" src="/js/main.js"></script>
     <?php
-        require_once("../src/home_page.php");
-        require_once("../src/presentation.php");
-        require_once("../src/skills.php");
-        require_once("../src/experiments.php");
-        require_once("../src/qualifications_formations.php");
-        require_once("../src/projects.php");
-        require_once("../src/passions_contact.php");
-        require_once("../src/footer.php");
+        require_once "../src/home_page.php";
+        require_once "../src/presentation.php";
+        require_once "../src/skills.php";
+        require_once "../src/experiments.php";
+        require_once "../src/qualifications_formations.php";
+        require_once "../src/projects.php";
+        require_once "../src/passions_contact.php";
+        require_once "../src/footer.php";
     ?>
 
     

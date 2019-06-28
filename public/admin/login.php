@@ -1,15 +1,15 @@
 <?php
 session_start();
 if (count($_POST) === 2) {
-  $adminEmail = "valentinmont8@gmail.com";
-  $adminPassword = 'valentin';
-  $errorMessage = 'User or password incorrect !';
-  if ($adminEmail === $_POST['email'] && $adminPassword === $_POST['password']){
-    $_SESSION['is_logged_in'] = true;
-    header('Location: http://'.$_SERVER['HTTP_HOST'].'/admin/index.php');
-    exit();
+    $adminEmail = "valentinmont8@gmail.com";
+    $adminPassword = 'valentin';
+    $errorMessage = 'User or password incorrect !';
+    if ($adminEmail === $_POST['email'] && $adminPassword === $_POST['password']) {
+        $_SESSION['is_logged_in'] = true;
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/admin/index.php');
+        exit();
 
-  } 
+    } 
   
 }
 
@@ -39,16 +39,16 @@ if (count($_POST) === 2) {
   </body>
   <div class="container">
 <?php 
-    if((isset($errorMessage))){
-      echo 
+if((isset($errorMessage))) {
+    echo 
     '<div class="col-md-4 mx-auto"> ',
     '<div class="alert alert-danger" role="alert">',
-      $errorMessage,
+    $errorMessage,
     '</div>',
     '</div>';
 
-    }
-  ?>
+}
+?>
  
 
   <form class="form-signin" action="login.php" method="POST">

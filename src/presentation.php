@@ -2,7 +2,7 @@
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
@@ -25,13 +25,13 @@ $rows = $reponse->fetchAll();
                
                     <div class="presentbar">
                     <?php
-                        foreach ($rows as $rows){
-                            print_r ('<br>Nom :'.$rows['LASTNAME'].'<br>');
-                            print_r ('<br>Prenom :'.$rows['FIRSTNAME'].'<br>');
-                            print_r ('<br>Date de naissance :'.$rows['BIRTHDAY'].'<br>');
-                            print_r ('<br>Mail :'.$rows['MAIL'].'<br>');
-                        }
-                   ?>
+                    foreach ($rows as $rows){
+                        print_r('<br>Nom :'.$rows['LASTNAME'].'<br>');
+                        print_r('<br>Prenom :'.$rows['FIRSTNAME'].'<br>');
+                        print_r('<br>Date de naissance :'.$rows['BIRTHDAY'].'<br>');
+                        print_r('<br>Mail :'.$rows['MAIL'].'<br>');
+                    }
+                    ?>
                     </div>
                 
                
