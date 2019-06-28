@@ -2,9 +2,9 @@
 session_start();
 if (count($_POST) === 2) {
     $adminEmail = "valentinmont8@gmail.com";
-    $adminPassword = 'valentin';
+    $adminPassword = '$2y$10$SXW9xjSdKz5NaA0t3eHMiuCSC079NWtEcprWCSlVxuMKfaIgR2lue';
     $errorMessage = 'User or password incorrect !';
-    if ($adminEmail === $_POST['email'] && $adminPassword === $_POST['password']) {
+    if ($adminEmail === $_POST['email'] && password_verify($_POST['password'], $adminPassword)) {
         $_SESSION['is_logged_in'] = true;
         header('Location: http://'.$_SERVER['HTTP_HOST'].'/admin/index.php');
         exit();
