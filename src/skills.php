@@ -9,11 +9,8 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-
 $reponse = $bdd->query('SELECT * FROM competence');
 $rows = $reponse->fetchAll();
-
-
 ?>
 
 <section id="block2">
@@ -22,13 +19,11 @@ $rows = $reponse->fetchAll();
         </div>
         <div class="skillsbar">
             <div class="sousboitedroit">
-
                 <?php
                 foreach($rows as $rows)
                 {
                     echo 
                     "<div class='parentss'>",
-
                     "<div class='parentxt'>",
                         "<div class='sousparentxt'",
                             "<p class='viewbar'>$rows[NOM]</p>",
@@ -40,12 +35,10 @@ $rows = $reponse->fetchAll();
                                 "<div class='enfantcolor' style='width:$rows[NIVEAU]%;'>$rows[NIVEAU]</div>",
                             "</div>",
                         "</div>",
-
                     "</div>",
                     "</div>";
                 }
                 ?>
             </div>
         </div>
-
     </section>

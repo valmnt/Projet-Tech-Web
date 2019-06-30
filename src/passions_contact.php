@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__.'/../vendor/autoload.php';
-
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
@@ -10,6 +9,7 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
+
 if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['field3'])) {
     $field1 = $_POST['field1'];
     $field2 = $_POST['field2'];
@@ -30,14 +30,9 @@ if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['fiel
     ->setTo(['vmvdesigne@gmail.com' => 'Valentin'])
     ->setBody("T'as reçu un nouveau message, vas vite le checker 😃 !");
     $result = $mailer->send($message);
-    
 }
 $reponse = $bdd->query('SELECT * FROM passions');
 $rows = $reponse->fetchAll();
-
-
-
-
 ?>
 
 <section id="block6">
@@ -55,7 +50,6 @@ $rows = $reponse->fetchAll();
                     ?>
                     </p>
                 </div>
-               
             </div>
         </div>
         <div class="block6droit">
