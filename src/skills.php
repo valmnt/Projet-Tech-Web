@@ -12,7 +12,6 @@ catch(Exception $e)
 
 $reponse = $bdd->query('SELECT * FROM competence');
 $rows = $reponse->fetchAll();
-$nb = 0
 
 
 ?>

@@ -20,10 +20,23 @@ if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['fiel
     $STH->bindParam(':field2', $field2);
     $STH->bindParam(':field3', $field3);
     $STH->execute();
+
+    $transport = (new Swift_SmtpTransport('smtp.googlemail.com', 587,'tls'))
+    ->setUsername ('valentincurriculum@gmail.com')
+    ->setPassword('V@lentin13');
+    $mailer = new Swift_Mailer($transport);
+    $message = (new Swift_Message('Nouveau message sur le CV'))
+    ->setFrom(['valentincurriculum@gmail.com' => 'Mail CV'])
+    ->setTo(['vmvdesigne@gmail.com' => 'Valentin'])
+    ->setBody("T'as reçu un nouveau message, vas vite le checker 😃 !");
+    $result = $mailer->send($message);
     
 }
 $reponse = $bdd->query('SELECT * FROM passions');
 $rows = $reponse->fetchAll();
+
+
+
 
 ?>
 
