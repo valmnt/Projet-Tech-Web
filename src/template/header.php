@@ -65,6 +65,9 @@
       <li class="nav-item dropdown">
         <a class="nav-link" href="http://portfolio.local/admin/passions/passions.php">Passions</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="http://portfolio.local/admin/form/form.php">Formulaire</a>
+      </li>
     </ul>
   </div>
 </nav>

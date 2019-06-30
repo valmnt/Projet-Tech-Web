@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__.'/../vendor/autoload.php';
+
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=techweb_bdd_mont;charset=utf8', 'root');
@@ -18,9 +20,8 @@ if(!empty($_POST['field1']) and !empty($_POST['field2']) and !empty($_POST['fiel
     $STH->bindParam(':field2', $field2);
     $STH->bindParam(':field3', $field3);
     $STH->execute();
-
+    
 }
-
 $reponse = $bdd->query('SELECT * FROM passions');
 $rows = $reponse->fetchAll();
 
@@ -47,13 +48,6 @@ $rows = $reponse->fetchAll();
         <div class="block6droit">
             <div class="styleform">
                 <h1>Contact Me</h1>
-                <div class='alertbox'>
-                <?php
-                if(empty($_POST['field1']) or empty($_POST['field2']) or empty($_POST['field3']) ) {
-                    echo "<div class='alert' style='display:flex; align-items:center; justify-content:center;  width:40%; background-color:#727272; color:white; text-align:center; height:100%;'>Veuillez remplir tout les champs !</div>";
-                }
-                ?>
-                        </div>
                 <div class="info">
                     <div class="adressetelephone">
                         <div class="img"><i class="fas fa-map-marker-alt"></i></div>
