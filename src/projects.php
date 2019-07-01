@@ -18,7 +18,7 @@
                         <p class="text_projet">L'équipement utilisé par la société est obsolète et elle nous demande de mettre à jour tout son matériel informatique afin</p>
                         <p class="text_projet">de faciliter la visibilité et l'accessibilité sur les activités de ses clients.</p>
                         <p class="text_projet">Pour cela nous avons simulé un réseau. C’est à dire que nous avons travaillé avec des</p>
-                        <p class="text_projet">machines virtuels afin de simuler les  les postes clients. Nous avons utilisé des routeurs Cisco pour faire </p>
+                        <p class="text_projet">machines virtuels afin de simuler les postes clients. Nous avons utilisé des routeurs Cisco pour faire </p>
                         <p class="text_projet">communiquer les postes entre eux. Enfin nous avions installé un serveur web linux afin de simuler un intranet et un serveur windows serveur.</p>
                         <p class="text_projet">ayant les rôles : d'ADDS, serveur de fichier et DNS</p>
                         <div class="contenu_img"><img class="projectimg" src="/img/reseau.png"></div>
